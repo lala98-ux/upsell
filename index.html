@@ -3053,6 +3053,10 @@
       .detail-popup-grid::-webkit-scrollbar { height: 4px; }
       .detail-popup-grid::-webkit-scrollbar-thumb { background: #D8D2EC; border-radius: 4px; }
       .detail-popup-grid > .detail-reco-card { flex: 0 0 calc(50% - 5px); scroll-snap-align: start; }
+      /* 모바일: 더담기 팝업 카드/버튼 호버 애니메이션 제거 (터치에서 hover 잔상 방지) */
+      .detail-popup .detail-reco-card:hover { transform: none; box-shadow: none; border-color: var(--border); }
+      .detail-popup .detail-reco-btn:hover { background: #fff; color: var(--brand); border-color: rgba(var(--brand-rgb),0.4); animation: none; }
+      .detail-popup .detail-reco-btn::after, .detail-popup .detail-reco-btn:hover::after { opacity: 0 !important; animation: none !important; }
       /* 모바일: 함께 구매하면 좋은 상품 '연관 추천' 태그 제거 */
       .detail-reco-tag { display: none; }
 
